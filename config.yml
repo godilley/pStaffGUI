@@ -1,0 +1,66 @@
+############################################################
+# +------------------------------------------------------+ #
+# |                       Notes                          | #
+# +------------------------------------------------------+ #
+############################################################
+#This is the config file in which things can be configured
+# Configuration Options
+#lastline_(ONLINE/OFFLINE/ONLINE_BUNGEE) Very last line of the head and will be added if ShowIfOnline = true. It will display one of the 3 depending whether they are online, offline or online and it's a bungee server.
+#UsingBungee = If you are using a bungee server change to true to allow for seeing of what server they are on
+#BungeeServers = Enter the server names you wish to use to check if they are online. It should be in the format of server1,server2,server3 (etc) (Requires bungee=true)
+#DynamicInvSize = The inventory size will depend on what the last item in the GUI is. E.G if the last item is in slot 15, the inventory size will be 18. Set it to false to be 54 size.
+#ShowIfOnline = Will show whether the player is online or offline (If on the same server as player will depend on if they are vanished and have perms to see etc)
+#OnlyShowIfOnline = Will only show heads of staff if they are currently online.
+#AddHeadsInNextFreeSlot = Will add the heads in the next free slot (requires OnlyShowIfOnline = true).
+#SaveInterval = Interval in seconds in which the files are saved
+#BungeeUpdateInterval = Interval in which the server retrieves the online players from bungee servers
+# Variables
+#%player% = Replaced with the players name)
+#%world% = Replaced with the players name
+#%x% = Replaced with the world the x coordinate
+#%y% = Replaced with the players y coordinate
+#%z% = Replaced with the players z coordinate
+#%rank% = Replaced with the rank of the player
+#%lastlogin% = Replaced with the last login of the player
+#%onlinetime% = Replaced with the online time of the player if online or time since last login and not a date
+#&1-9 + &a-f = Color Codes
+############################################################
+#'InventoryTitle' must be a maximum of 32 characters (letters/numbers) and can contain color codes
+############################################################
+
+############################################################
+# +------------------------------------------------------+ #
+# |                       Config Options                 | #
+# +------------------------------------------------------+ #
+############################################################
+StaffHeadTitle: "&6Staff"
+InventoryTitle: "&4Staff Members"
+ShowLine1: "true"
+ShowLine2: "true"
+ShowLine3: "true"
+ShowLine4: "false"
+ShowLine5: "false"
+line1: "&7IGN &8&l// &c%player%"
+line2: "&7Rank &8&l// &c%rank%"
+line3: "&7Online For / Last Login &8&l// &c%onlinetime%"
+line4: "&7Last Login &8&l// &c%lastlogin%"
+line5: "&d&lYay for free lines"
+lastline_ONLINE: "&aOnline"
+lastline_OFFLINE: "&cOffline"
+lastline_ONLINE_BUNGEE: "&aOnline On Server %server%"
+UsingBungee: "false"
+# Takes a plugin reload (not /staff reload) to take effect
+BungeeServers: "lobby,server2"
+DynamicInvSize: "false"
+ShowIfOnline: "true"
+OnlyShowIfOnline: "false"
+AddHeadsInNextFreeSlot: "true"
+DateFormat: "%days% days %hours% hours %minutes% minutes and %seconds% seconds"
+HideUpdateMessage: "false"
+#Will be added to the next free slot instead of where they are setup in /modify
+SaveInterval: "600"
+BungeeUpdateInterval: "30"
+
+#SaveInterval = Interval in which the plugin saves data to the files (in seconds). NOTE: CHANGING THIS WITHOUT RELOADING/RESTARTING THE SERVER MAY CAUSE MULTIPLE SAVES TO HAPPEN.
+#BungeeUpdateInterval = Interval in which the server retrieves the online players from bungee servers (in seconds). NOTE: CHANGING THIS WITHOUT RELOADING/RESTARTING THE SERVER MAY CAUSE RETREIVALS TO HAPPEN.
+#DO NOT EDIT VERSION AS IT WILL BREAK THE PLUGIN
