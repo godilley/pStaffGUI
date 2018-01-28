@@ -2,6 +2,7 @@
 *A start to an updated version of this plugin is available [here](https://github.com/godilley/pStaffListV2)*
 
 **Note: This plugin coded _awfully_. I highly recommend using the above and finishing it.**
+
 **^^I literally cannot stress the above enough ^^**
 
 ## About:
